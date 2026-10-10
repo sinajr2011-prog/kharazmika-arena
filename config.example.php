@@ -1,8 +1,4 @@
 <?php
-/**
- * Shared DB connection + session helpers
- * Copy to config.php and fill in real credentials.
- */
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -50,12 +46,12 @@ function level_from_xp(int $xp): int {
 }
 
 function title_from_level(int $level): string {
-    if ($level >= 30) return 'افسانه خوارزمیکا';
-    if ($level >= 20) return 'قهرمان استان';
-    if ($level >= 12) return 'استاد شهر';
-    if ($level >= 7)  return 'حلّال';
-    if ($level >= 3)  return 'کاوشگر';
-    return 'تازه‌وارد';
+    if ($level >= 30) return 'Kharazmika Legend';
+    if ($level >= 20) return 'Province Champion';
+    if ($level >= 12) return 'City Master';
+    if ($level >= 7)  return 'Solver';
+    if ($level >= 3)  return 'Explorer';
+    return 'Newcomer';
 }
 
 function xp_to_next_level(int $xp): array {
